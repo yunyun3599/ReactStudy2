@@ -1,3 +1,3 @@
-#React
+# React
 
-##studying react
+## studying react
