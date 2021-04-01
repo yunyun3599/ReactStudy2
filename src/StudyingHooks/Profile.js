@@ -1,31 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useReducer } from 'react';
+
+function reducer(state, action){
+    return {
+        ...state,
+        [action.name] : action.value
+    }
+}
 
 const Profile = () => {
-    const [name, setName] = useState('');
-    const [age, setAge] = useState('');
+    const [state, dispatch] = useReducer(reducer, {name: '', age: ''});
+    const {name, age} = state;
 
-    useEffect(() => {
-        console.log('useEffect');
-        console.log(name);
-        return() => {
-            console.log('cleanup')
-            console.log(name)
-        }
-    }, [name]);
-
-    const onChangeName = (e) => {
-        setName(e.target.value);
-    };
-
-    const onChangeAge = (e) => {
-        setAge(e.target.value);
+    const onChange = e => {
+        dispatch(e.target);
     }
 
     return(
         <div>
             <div>
-                <b>이름 입력: </b><input value={name} onChange={onChangeName}/><br/>
-                <b>나이 입력: </b><input value={age} onChange={onChangeAge}/>
+                <b>이름 입력: </b><input name="name" value={name} onChange={onChange}/><br/>
+                <b>나이 입력: </b><input name="age" value={age} onChange={onChange}/>
             </div>
             <div>
                 <b>이름: </b>{name}
