@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import Average from './StudyingHooks/Average';
+import Profile from './StudyingHooks/Profile';
 
 const App = () => {
   return(
-    <Average/>
+    <Profile/>
   );
 };
 
