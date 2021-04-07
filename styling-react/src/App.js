@@ -1,9 +1,9 @@
 import React from 'react';
-import SassComponent from './SassComponent';
+import CSSModule from './CSSModule';
 
 function App() {
   return (
-    <SassComponent/>
+    <CSSModule/>
   );
 }
 

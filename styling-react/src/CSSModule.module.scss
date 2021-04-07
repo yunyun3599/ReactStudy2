@@ -1,0 +1,16 @@
+.wrapper {
+    background: lemonchiffon;
+    padding: 1rem;
+    color: black;
+    font-size:2rem;
+    &.border{
+        border:1px solid black;
+    }
+}
+
+:global {
+    .special{
+        font-weight: 500;
+        color: coral;
+    }
+}
