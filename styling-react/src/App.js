@@ -1,9 +1,9 @@
 import React from 'react';
-import CSSModule from './CSSModule';
+import ArrayTest from './ArrayTest';
 
 function App() {
   return (
-    <CSSModule/>
+    <ArrayTest/>
   );
 }
 

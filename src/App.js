@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import Profile from './StudyingHooks/Profile';
+import React from "react";
+import StyledComponent from './StyledComponents';
 
 const App = () => {
   return(
-    <Profile/>
+    <StyledComponent/>
   );
 };
 
